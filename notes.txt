@@ -1,0 +1,2 @@
+resources/templates/index.html is automatically mapped to "/".
+
