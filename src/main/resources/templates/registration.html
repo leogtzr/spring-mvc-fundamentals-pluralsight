@@ -12,14 +12,14 @@
 	<form action="registration" method="POST">
 		<table>
 			<tr>
-				<td>Name:</td>
+				<td><span th:text="#{name}"></span></td>
 			</tr>
 			<td>
 				<input type="text" id="name" name="name" required>
 			</td>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="Add Registration">
+					<input type="submit" th:value="#{save.changes}">
 				</td>
 			</tr>
 		</table>
