@@ -1,2 +1,6 @@
-com\pluralsight\conference\controller\GreetingController.class
+com\pluralsight\conference\controller\RegistrationController.class
 com\pluralsight\conference\ConferenceApplication.class
+com\pluralsight\conference\configuration\ConferenceConfiguration.class
+com\pluralsight\conference\model\Registration.class
+com\pluralsight\conference\controller\GreetingController.class
+com\pluralsight\conference\controller\HomeController.class
