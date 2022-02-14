@@ -13,17 +13,19 @@ public class RegistrationController {
 
     private static final Logger log = LoggerFactory.getLogger(RegistrationController.class);
 
-    @GetMapping("register")
-    public String register() {
+    // Implementing a Post-Redirect-Get:
+
+    @GetMapping("registration")
+    public String getRegistration(final @ModelAttribute("registration") Registration registration) {
 
         return "registration";
     }
 
     @PostMapping("registration")
-    public String registration(final @ModelAttribute("registration") Registration registration) {
+    public String addRegistration(final @ModelAttribute("registration") Registration registration) {
         log.info("Got: {}", registration);
 
-        return "index";
+        return "redirect:registration";
     }
 
 }
