@@ -1,9 +1,12 @@
 package com.pluralsight.conference.model;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 public class Registration {
 
+    // @NotEmpty(message = "'name' cannot be empty")
+    @NotEmpty(message = "{vacio}")
     private String name;
 
     public Registration(String name) {

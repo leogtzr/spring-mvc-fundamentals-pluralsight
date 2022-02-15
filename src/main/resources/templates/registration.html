@@ -9,17 +9,22 @@
 
 	<h4><p th:text="Registration..." /></h4>
 
-	<form action="registration" method="POST">
+	<form th:action="@{/registration}" method="POST" th:object="${registration}">
 		<table>
 			<tr>
 				<td><span th:text="#{name}"></span></td>
 			</tr>
 			<td>
-				<input type="text" id="name" name="name" required>
+				<input type="text" id="name" name="name">
 			</td>
 			<tr>
 				<td colspan="2">
 					<input type="submit" th:value="#{save.changes}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
 				</td>
 			</tr>
 		</table>
