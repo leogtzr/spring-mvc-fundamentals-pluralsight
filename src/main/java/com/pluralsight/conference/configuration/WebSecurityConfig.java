@@ -14,10 +14,12 @@ public class WebSecurityConfig implements WebMvcConfigurer {
         registry.addResourceHandler(
                         "/img/**",
                         "/css/**",
+                        "/js/**",
                         "/libs/**")
                 .addResourceLocations(
                         "classpath:/static/img/",
                         "classpath:/static/css/",
+                        "classpath:/static/js/",
                         "classpath:/static/libs/");
     }
 

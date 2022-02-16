@@ -17,7 +17,6 @@ public class RegistrationController {
     private static final Logger log = LoggerFactory.getLogger(RegistrationController.class);
 
     // Implementing a Post-Redirect-Get:
-
     @GetMapping("registration")
     public String getRegistration(final @ModelAttribute("registration") Registration registration) {
 
